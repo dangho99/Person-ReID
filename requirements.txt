@@ -1,0 +1,8 @@
+scikit-learn
+more_itertools
+scipy
+loguru
+chromadb
+pymongo
+pandas
+shortuuid
