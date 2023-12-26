@@ -1,0 +1,12 @@
+ultralytics
+loguru
+torch
+numpy
+redis
+# opencv-python-headless<4.3
+matplotlib
+# pyyaml==6.0.1
+tqdm
+requests
+pymongo
+

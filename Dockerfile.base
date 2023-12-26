@@ -1,0 +1,15 @@
+FROM dustynv/l4t-ml:r35.4.1
+
+RUN apt-get update -y && \
+    apt-get install -y telnet curl nano vim &&\
+    apt-get install -y libsm6 libxext6 libxrender-dev
+
+COPY ./requirements.txt /tmp/requirements.txt
+
+RUN python3 -m pip install -U pip && \
+    python3 -m pip install -r /tmp/requirements.txt && \
+    rm -rf /tmp/requirements.txt && \
+    python3 -m pip uninstall opencv-python -y && \
+    python3 -m pip install opencv-contrib-python==4.5.4.60
+    
+CMD ["bash"]
